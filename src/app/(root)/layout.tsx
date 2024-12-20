@@ -6,6 +6,7 @@ import TopBar from "@/components/shared/TopBar";
 import LeftSideBar from "@/components/shared/LeftSideBar";
 import RightSideBar from "@/components/shared/RightSideBar";
 import BottomBar from "@/components/shared/BottomBar";
+import Gigificon from "@/components/shared/Gigificon";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
               <div className=" w-full max-w-4xl">
                 {children}
               </div>
+              <Gigificon/>
             </section>
             <RightSideBar />
           </main>

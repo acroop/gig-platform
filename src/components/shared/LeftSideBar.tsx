@@ -40,8 +40,11 @@ function LeftSideBar() {
           return (
             <Link href={link.route}
               key={link.label}
-              className={`relative flex justify-start gap-4 rounded-lg p-4 ${isActive && 'bg-primary-500'}`}
-            >
+              className={`relative flex justify-start gap-4 rounded-lg p-4 transition-colors duration-300 ${
+                isActive ? 'bg-primary-500' : 'hover:bg-secondary-500'
+              }`}
+              
+            > 
               <Image
                 src={link.imgURL}
                 alt={link.label}
@@ -57,7 +60,7 @@ function LeftSideBar() {
       <div className=' mt-10 px-6'>
         <SignedIn>
           <SignOutButton signOutOptions={{redirectUrl: "/sign-in"}} >
-            <div className=' flex cursor-pointer gap-2 p-4'>
+            <div className='rounded-lg flex cursor-pointer gap-2 p-4 transition-colors duration-300 hover:bg-secondary-500'>
               <Image
                 src="/logout.svg"
                 alt='logout'

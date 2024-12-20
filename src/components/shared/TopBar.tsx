@@ -1,13 +1,17 @@
-
+"use client"
 import { OrganizationSwitcher, SignedIn, SignedOut, SignIn, SignInButton, SignOutButton } from '@clerk/nextjs'
 import { dark } from '@clerk/themes';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import InteractiveHoverButton from '../ui/interactive-hover-button';
+import ShinyButton from '../ui/shiny-button';
+import { useRouter } from 'next/navigation';
 
 function TopBar() {
 
   const isUserSignedIn = true;
+  const router = useRouter()
 
   return (
     <div>
@@ -17,7 +21,14 @@ function TopBar() {
           <p className=' text-heading3-bold text-light-1 max-xs:hidden'>GIGIFY</p>
           </Link>
 
+
+
           <div className=' flex items-center gap-1'>
+            <div className=' block'>
+                <ShinyButton className=' bg-black text-white' onClick={() => router.push("/complete-profile")}>
+                  Complete Your Profile
+                </ShinyButton>
+            </div>
             <div className=' block md:hidden'>
               <SignedIn>
                 <SignOutButton>
