@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     const pythonScriptPath = path.resolve("./src/app/api/recommend/recommendation.py");
 
     // Prepare the command to execute the Python script
-    const command = `python3 ${pythonScriptPath} "${qualification}" ${experience} "${topSkills[0]}" "${topSkills[1]}" "${topSkills[2]}"`;
+    const command = `python ${pythonScriptPath} "${qualification}" ${experience} "${topSkills[0]}" "${topSkills[1]}" "${topSkills[2]}"`;
 
     // Execute the Python script using exec
     const { stdout, stderr } = await new Promise<{ stdout: string; stderr: string }>((resolve, reject) => {

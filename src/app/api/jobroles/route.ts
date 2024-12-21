@@ -42,7 +42,7 @@ export async function POST(request: Request) {
 
 async function runPythonScript(skills: string): Promise<string> {
   return new Promise((resolve, reject) => {
-    const process = spawn('python3', ['./src/app/api/jobroles/webscrapedjobsuggestion.py']);
+    const process = spawn('python', ['./src/app/api/jobroles/webscrapedjobsuggestion.py']);
     let output = '';
 
     process.stdin.write(`${skills}\n`);
