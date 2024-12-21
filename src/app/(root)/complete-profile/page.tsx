@@ -3,30 +3,45 @@
 import InteractiveHoverButton from "@/components/ui/interactive-hover-button";
 import { useState } from "react";
 import axios from "axios";
-
+import { useAuth } from "@clerk/nextjs";
 
 type FormData = {
+  id: any,
   email: string;
   fullName: string;
-  hobby: string;
-  [key: string]: string; // Allow dynamic keys
+  highestQualification: string;
+  experience: number;
+  topSkills: string[];
 };
 
 export default function ConditionalForm() {
-  const [showQuestions, setShowQuestions] = useState(false);
+  const { userId }: any = useAuth()
   const [formData, setFormData] = useState<FormData>({
+    id: userId,
     email: "",
     fullName: "",
-    hobby: "",
+    highestQualification: "",
+    experience: 0,
+    topSkills: ["", "", ""], // Predefined array for top 3 skills
   });
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({
+      ...prev,
+      [name]: name === "experience" ? parseInt(value) : value,
+    }));
+  };
+
+  const handleSkillChange = (index: number, value: string) => {
+    const updatedSkills = [...formData.topSkills];
+    updatedSkills[index] = value;
+    setFormData({ ...formData, topSkills: updatedSkills });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,17 +52,16 @@ export default function ConditionalForm() {
 
     try {
       // POST data to the API
+      // Ensure topSkills is sent as an array
       const response = await axios.post("/api/profile", {
-        
+        id: userId,
         email: formData.email,
         fullName: formData.fullName,
-        hobby: formData.hobby,
-        question1: formData.question1 || "",
-        question2: formData.question2 || "",
-        question3: formData.question3 || "",
-        question4: formData.question4 || "",
-        question5: formData.question5 || "",
+        highestQualification: formData.highestQualification,
+        experience: formData.experience,
+        topSkills: formData.topSkills, // Should be an array
       });
+
 
       setSuccessMessage(response.data.message);
     } catch (error: any) {
@@ -88,50 +102,46 @@ export default function ConditionalForm() {
         placeholder="Enter your full name"
       />
 
-      {/* Hobby */}
-      <label className="block mb-2 font-medium text-white">Hobby</label>
+      {/* Highest Qualification */}
+      <label className="block mb-2 font-medium text-white">
+        Highest Qualification
+      </label>
       <input
         type="text"
-        name="hobby"
-        value={formData.hobby}
+        name="highestQualification"
+        value={formData.highestQualification}
         onChange={handleChange}
+        required
         className="w-full p-2 mb-4 border rounded"
-        placeholder="Enter your hobby"
+        placeholder="Enter your highest qualification"
       />
 
-      {/* Show Questions Checkbox */}
-      <div className="flex items-center mb-4">
-        <input
-          type="checkbox"
-          id="showQuestions"
-          onChange={(e) => setShowQuestions(e.target.checked)}
-          className="mr-2"
-        />
-        <label htmlFor="showQuestions" className="font-medium text-white">
-          Answer additional questions
-        </label>
-      </div>
+      {/* Experience */}
+      <label className="block mb-2 font-medium text-white">Experience (in years)</label>
+      <input
+        type="number"
+        name="experience"
+        value={formData.experience}
+        onChange={handleChange}
+        required
+        className="w-full p-2 mb-4 border rounded"
+        placeholder="Enter your experience in years"
+        min={0}
+      />
 
-      {/* Conditional Questions */}
-      {showQuestions && (
-        <div className="space-y-4">
-          {Array.from({ length: 5 }).map((_, index) => (
-            <div key={index}>
-              <label className="block mb-3 font-medium text-white">
-                Question {index + 1}
-              </label>
-              <input
-                type="text"
-                name={`question${index + 1}`}
-                value={formData[`question${index + 1}`] || ""}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-                placeholder={`Enter your answer for question ${index + 1}`}
-              />
-            </div>
-          ))}
-        </div>
-      )}
+      {/* Top 3 Skills */}
+      <label className="block mb-2 font-medium text-white">Top 3 Skills</label>
+      {formData.topSkills.map((skill, index) => (
+        <input
+          key={index}
+          type="text"
+          value={skill}
+          onChange={(e) => handleSkillChange(index, e.target.value)}
+          required
+          className="w-full p-2 mb-4 border rounded"
+          placeholder={`Enter skill ${index + 1}`}
+        />
+      ))}
 
       {/* Submit Button */}
       <div className="flex justify-center items-center mt-5">

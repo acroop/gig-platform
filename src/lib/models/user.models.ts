@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-
 const userSchema = new mongoose.Schema({
     id: {
         type: String,
@@ -15,32 +14,24 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    hobby:{
-        type:String,
-        required:true
-    },
-    q1: {
+    highestQualification: {
         type: String,
         required: true
     },
-    q2: {
-        type: String,
+    experience: {
+        type: Number, // Storing experience in years
         required: true
     },
-    q3: {
-        type: String,
+    topSkills: {
+        type: [String], // Array of strings to store sk1, sk2, sk3
+        validate: [arrayLimit, 'You can only add up to 3 skills.'],
         required: true
-    },
-    q4: {
-        type: String,
-        required: true
-    },
-    q5: {
-        type: String,
-        required: true
-    },
+    }
+});
 
-})
+// Custom validator to ensure the array has exactly 3 skills
+function arrayLimit(val: any) {
+    return val.length === 3;
+}
 
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
-
