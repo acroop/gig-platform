@@ -176,7 +176,6 @@ module.exports = {
   		colors: {
   			'primary-500': '#DD4B39',
   			'secondary-500': '#ab807d',
-  			// 'secondary-500': '#FFB620',
   			blue: '#0095F6',
   			'logout-btn': '#FF5A5A',
   			'navbar-menu': 'rgba(16, 16, 18, 0.6)',
@@ -254,11 +253,20 @@ module.exports = {
   				to: {
   					height: 0
   				}
+  			},
+  			'background-position-spin': {
+  				'0%': {
+  					backgroundPosition: 'top center'
+  				},
+  				'100%': {
+  					backgroundPosition: 'bottom center'
+  				}
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'background-position-spin': 'background-position-spin 3000ms infinite alternate'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

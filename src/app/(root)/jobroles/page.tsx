@@ -27,7 +27,7 @@ const JobSearch = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Job Finder</h1>
+      <h1 className=" head-text text-left">Job Finder</h1>
       <div className="mb-4">
         <label htmlFor="skills" className="block text-lg font-medium mb-2">
           Enter your skills (comma-separated):
@@ -42,7 +42,7 @@ const JobSearch = () => {
         />
       </div>
       <button
-        className="bg-blue-500 text-white px-4 py-2 rounded-md"
+        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-[#141414]"
         onClick={fetchJobs}
         disabled={loading}
       >
@@ -52,23 +52,23 @@ const JobSearch = () => {
       {error && <p className="text-red-500 mt-4">{error}</p>}
 
       <div className="mt-6">
-        <h2 className="text-xl font-bold mb-4">Recommended Jobs:</h2>
+        <h2 className="text-xl font-bold mb-4 text-white">Recommended Jobs:</h2>
         {jobs.length === 0 && !loading && !error && (
           <p className="text-gray-600">No jobs to display. Enter skills and click "Find Jobs".</p>
         )}
-        <ul className="space-y-4">
+        <ul className="">
           {jobs.map((job, index) => (
-            <li key={index} className="p-4 border border-gray-300 rounded-md">
-              <h3 className="text-lg font-bold">{job.jobTitle}</h3>
-              <p className="text-gray-600">Company: {job.companyName}</p>
-              <p className="text-gray-600">Location: {job.location}</p>
-              <p className="text-gray-600">Skills Required: {job.skillsRequired}</p>
-              <p className="text-gray-600">Posted Date: {job.postedDate}</p>
+            <li key={index} className="p-4 border border-gray-300 rounded-md m-5">
+              <h3 className="text-lg font-bold mt-0">{job.jobTitle}</h3>
+              <p className=" text-white">Company: {job.companyName}</p>
+              <p className=" text-white">Location: {job.location}</p>
+              <p className=" text-white">Skills Required: {job.skillsRequired}</p>
+              <p className=" text-white">Posted Date: {job.postedDate}</p>
               <a
                 href={job.jobLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 underline"
+                className="text-blue-500 underline text-white"
               >
                 View Job
               </a>

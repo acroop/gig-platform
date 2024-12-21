@@ -16,8 +16,8 @@ function LeftSideBar() {
     },
     {
       imgURL: "/search.svg",
-      route: "/search",
-      label: "Search",
+      route: "/jobroles",
+      label: "Jobs",
     },
 
     {
