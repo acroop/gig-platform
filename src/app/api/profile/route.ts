@@ -3,19 +3,13 @@
 import { NextResponse } from "next/server";
 import { User } from "@/lib/models/user.models"; // Import the User schema
 import { connectDb } from "@/lib/validations/mongoose";
-import { auth } from "@clerk/nextjs/server";
-// import { useAuth } from "@clerk/nextjs";
+
+
 
 // Handle POST requests
 export async function POST(request: Request) {
   try {
-    // Get the authenticated user's ID
-    // const { userId }: any = useAuth();
-
-    // Check if the user is authenticated
-    // if (!userId) {
-    //   return NextResponse.json({ error: "Unauthorized: User is not authenticated" }, { status: 401 });
-    // }
+    
 
     const body = await request.json();
     const { id, email, fullName, highestQualification, experience, topSkills } = body;

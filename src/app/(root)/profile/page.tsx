@@ -13,7 +13,7 @@ type UserProfile = {
 };
 
 function Profile() {
-  const { userId } = useAuth(); // Get userId from Clerk
+  const { userId } = useAuth(); 
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
