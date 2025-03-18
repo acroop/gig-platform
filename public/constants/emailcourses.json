@@ -1,0 +1,53 @@
+{
+    "courses": [
+      {
+        "course_name": "Python Programming",
+        "link": "https://www.youtube.com/playlist?list=Python123"
+      },
+      {
+        "course_name": "Introduction to Machine Learning",
+        "link": "https://www.coursera.org/learn/machine-learning"
+      },
+      {
+        "course_name": "AWS Cloud Practitioner",
+        "link": "https://www.udemy.com/course/aws-certified-cloud-practitioner/"
+      },
+      {
+        "course_name": "Cybersecurity Fundamentals",
+        "link": "https://nptel.ac.in/courses/106/105/106105217/"
+      },
+      {
+        "course_name": "Data Science with Python",
+        "link": "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/"
+      },
+      {
+        "course_name": "Data Analysis for Beginners",
+        "link": "https://www.coursera.org/learn/data-analysis"
+      },
+      {
+        "course_name": "Kaggle Competitions for Beginners",
+        "link": "https://www.kaggle.com/learn/intro-to-machine-learning"
+      },
+      {
+        "course_name": "Principles of Management",
+        "link": "https://www.coursera.org/learn/principles-of-management"
+      },
+      {
+        "course_name": "Financial Accounting",
+        "link": "https://www.udemy.com/course/financial-accounting-for-beginners/"
+      },
+      {
+        "course_name": "Introduction to Finance and Accounting",
+        "link": "https://www.coursera.org/learn/finance-accounting"
+      },
+      {
+        "course_name": "Business Communication",
+        "link": "https://www.youtube.com/playlist?list=BusinessComm123"
+      },
+      {
+        "course_name": "Entrepreneurship Essentials",
+        "link": "https://www.udemy.com/course/entrepreneurship-essentials/"
+      }
+    ]
+  }
+  

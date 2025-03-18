@@ -1,0 +1,122 @@
+{
+    "recent_trends": {
+      "keywords": ["generative ai", "chatgpt", "gpt", "stable diffusion", "dall-e", "data engineering", "kubernetes", "devops", "5g", "edge computing", "sustainability", "carbon footprint", "green energy"],
+      "courses": [
+        {"course": "Generative AI with ChatGPT", "platform": "Coursera", "link": "https://www.coursera.org/learn/generative-ai"},
+        {"course": "Data Engineering with Google Cloud", "platform": "Coursera", "link": "https://www.coursera.org/learn/data-engineering-google-cloud"},
+        {"course": "Introduction to Kubernetes", "platform": "Udemy", "link": "https://www.udemy.com/course/kubernetes-for-beginners/"},
+        {"course": "DevOps Essentials", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=DevOps123"},
+        {"course": "5G Technology Basics", "platform": "Udemy", "link": "https://www.udemy.com/course/5g-technology-overview/"},
+        {"course": "Edge Computing for Beginners", "platform": "Coursera", "link": "https://www.coursera.org/learn/edge-computing"},
+        {"course": "Sustainability in Engineering", "platform": "NPTEL", "link": "https://nptel.ac.in/courses/112/105/112105206/"},
+        {"course": "Green Energy Fundamentals", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=GreenEnergy123"}
+      ]
+    },
+    "soft_skills": {
+      "keywords": ["communication skills", "teamwork", "problem-solving", "critical thinking", "emotional intelligence", "leadership"],
+      "courses": [
+        {"course": "Communication Skills Mastery", "platform": "Udemy", "link": "https://www.udemy.com/course/communication-skills-mastery/"},
+        {"course": "Critical Thinking for Success", "platform": "Coursera", "link": "https://www.coursera.org/learn/critical-thinking"},
+        {"course": "Leadership Essentials", "platform": "NPTEL", "link": "https://nptel.ac.in/courses/110/105/110105206/"},
+        {"course": "Emotional Intelligence at Work", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=EmotionalIntelligence123"}
+      ]
+    },
+    "cloud_computing": {
+      "keywords": ["cloud computing", "aws", "azure", "google cloud", "terraform", "multi-cloud"],
+      "courses": [
+        {"course": "AWS Solutions Architect", "platform": "Udemy", "link": "https://www.udemy.com/course/aws-solutions-architect-associate/"},
+        {"course": "Azure Fundamentals", "platform": "Coursera", "link": "https://www.coursera.org/learn/azure-fundamentals"},
+        {"course": "Google Cloud Professional Certification", "platform": "NPTEL", "link": "https://nptel.ac.in/courses/106/105/106105206/"},
+        {"course": "Terraform Basics", "platform": "Udemy", "link": "https://www.udemy.com/course/terraform-basics/"},
+        {"course": "Multi-Cloud Strategy", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=MultiCloud123"}
+      ]
+    },
+    "data_engineering": {
+      "keywords": ["data engineering", "big data", "spark", "hadoop", "etl", "data pipelines"],
+      "courses": [
+        {"course": "Big Data with Apache Spark", "platform": "Coursera", "link": "https://www.coursera.org/learn/big-data-spark"},
+        {"course": "Hadoop Basics for Beginners", "platform": "Udemy", "link": "https://www.udemy.com/course/hadoop-basics/"},
+        {"course": "Building ETL Pipelines", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=ETLPipelines123"},
+        {"course": "Data Engineering with Python", "platform": "Udemy", "link": "https://www.udemy.com/course/data-engineering-with-python/"},
+        {"course": "Advanced Data Pipelines", "platform": "Coursera", "link": "https://www.coursera.org/learn/data-pipelines"}
+      ]
+    },
+    "technology": {
+      "keywords": ["python", "ai", "machine learning", "cloud computing", "cybersecurity", "web development", "computer science", "cse", "data science", "data analysis", "kaggle", "it"],
+      "courses": [
+        {"course": "Python Programming", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=Python123"},
+        {"course": "Introduction to Machine Learning", "platform": "Coursera", "link": "https://www.coursera.org/learn/machine-learning"},
+        {"course": "AWS Cloud Practitioner", "platform": "Udemy", "link": "https://www.udemy.com/course/aws-certified-cloud-practitioner/"},
+        {"course": "Cybersecurity Fundamentals", "platform": "NPTEL", "link": "https://nptel.ac.in/courses/106/105/106105217/"},
+        {"course": "Data Science with Python", "platform": "Udemy", "link": "https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/"},
+        {"course": "Data Analysis for Beginners", "platform": "Coursera", "link": "https://www.coursera.org/learn/data-analysis"},
+        {"course": "Kaggle Competitions for Beginners", "platform": "Kaggle", "link": "https://www.kaggle.com/learn/intro-to-machine-learning"}
+      ]
+    },
+    "web_development": {
+      "keywords": ["html", "css", "javascript", "bootstrap", "frontend", "backend", "full stack"],
+      "courses": [
+        {"course": "HTML and CSS Fundamentals", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=HTMLCSS123"},
+        {"course": "JavaScript Basics", "platform": "Coursera", "link": "https://www.coursera.org/learn/javascript"},
+        {"course": "Bootstrap for Responsive Design", "platform": "Udemy", "link": "https://www.udemy.com/course/bootstrap-responsive-design/"},
+        {"course": "Full Stack Web Development", "platform": "NPTEL", "link": "https://nptel.ac.in/courses/106/106/106106202/"}
+      ]
+    },
+    "ui_ux": {
+      "keywords": ["ui", "ux", "figma", "canva", "design tools", "user experience", "user interface"],
+      "courses": [
+        {"course": "UI/UX Design Fundamentals", "platform": "Coursera", "link": "https://www.coursera.org/specializations/ui-ux-design"},
+        {"course": "Figma Basics for Designers", "platform": "Udemy", "link": "https://www.udemy.com/course/figma-for-designers/"},
+        {"course": "Design with Canva", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=Canva123"}
+      ]
+    },
+    "app_development": {
+      "keywords": ["android", "ios", "mobile development", "app development", "react native", "flutter"],
+      "courses": [
+        {"course": "Android App Development", "platform": "Coursera", "link": "https://www.coursera.org/learn/android-development"},
+        {"course": "iOS App Development", "platform": "Udemy", "link": "https://www.udemy.com/course/ios-app-development/"},
+        {"course": "React Native Basics", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=ReactNative123"},
+        {"course": "Flutter for Beginners", "platform": "NPTEL", "link": "https://nptel.ac.in/courses/106/105/106105220/"}
+      ]
+    },
+    "game_development": {
+      "keywords": ["game development", "unity", "unreal engine", "game design"],
+      "courses": [
+        {"course": "Unity Game Development", "platform": "Udemy", "link": "https://www.udemy.com/course/unity-game-development/"},
+        {"course": "Unreal Engine Essentials", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=Unreal123"},
+        {"course": "Game Design Basics", "platform": "Coursera", "link": "https://www.coursera.org/learn/game-design"}
+      ]
+    },
+    "ml_mathematics": {
+      "keywords": ["ml maths", "linear algebra", "probability", "statistics", "calculus", "optimization"],
+      "courses": [
+        {"course": "Mathematics for Machine Learning", "platform": "Coursera", "link": "https://www.coursera.org/learn/mathematics-for-machine-learning"},
+        {"course": "Linear Algebra Basics", "platform": "Udemy", "link": "https://www.udemy.com/course/linear-algebra-for-machine-learning/"},
+        {"course": "Probability and Statistics", "platform": "NPTEL", "link": "https://nptel.ac.in/courses/111/104/111104032/"},
+        {"course": "Calculus for Machine Learning", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=Calculus123"},
+        {"course": "Optimization Techniques", "platform": "Udemy", "link": "https://www.udemy.com/course/optimization-techniques-in-ml/"}
+      ]
+    },
+    "bba_bca_management_finance": {
+      "keywords": ["bba", "bca", "management", "finance", "business administration", "entrepreneurship", "investment", "corporate finance", "accounting"],
+      "courses": [
+        {"course": "Principles of Management", "platform": "Coursera", "link": "https://www.coursera.org/learn/principles-of-management"},
+        {"course": "Financial Accounting", "platform": "Udemy", "link": "https://www.udemy.com/course/financial-accounting-for-beginners/"},
+        {"course": "Introduction to Finance and Accounting", "platform": "Coursera", "link": "https://www.coursera.org/learn/finance-accounting"},
+        {"course": "Business Communication", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=BusinessComm123"},
+        {"course": "Entrepreneurship Essentials", "platform": "Udemy", "link": "https://www.udemy.com/course/entrepreneurship-essentials/"}
+      ]
+    },
+    "exams": {
+      "keywords": ["gate", "ssc", "je", "mock test", "exam", "series", "test", "ese", "engineering services", "rrb", "isro", "competitive exams"],
+      "courses": [
+        {"course": "GATE Preparation Guide", "platform": "Coursera", "link": "https://www.coursera.org/learn/gate-preparation"},
+        {"course": "SSC JE Exam Preparation", "platform": "Udemy", "link": "https://www.udemy.com/course/ssc-je-preparation/"},
+        {"course": "ESE (Engineering Services Exam) Basics", "platform": "YouTube", "link": "https://www.youtube.com/playlist?list=ESE123"},
+        {"course": "RRB JE Exam Crash Course", "platform": "Udemy", "link": "https://www.udemy.com/course/rrb-je-exam-crash-course/"},
+        {"course": "ISRO Exam Preparation", "platform": "Coursera", "link": "https://www.coursera.org/learn/isro-preparation"},
+        {"course": "Mock Test Series for Competitive Exams", "platform": "NPTEL", "link": "https://nptel.ac.in/courses/mock-test-series"}
+      ]
+    }
+  }
+  

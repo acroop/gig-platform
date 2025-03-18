@@ -25,8 +25,8 @@ function TopBar() {
 
           <div className=' flex items-center gap-1'>
             <div className=' block'>
-                <ShinyButton className=' bg-black text-white' onClick={() => router.push("/complete-profile")}>
-                  Complete Your Profile
+                <ShinyButton className=' bg-black text-green-500' onClick={() => router.push("/profile")}>
+                  Profile Completed
                 </ShinyButton>
             </div>
             <div className=' block md:hidden'>

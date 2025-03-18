@@ -54,15 +54,15 @@ const JobSearch = () => {
       <div className="mt-6">
         <h2 className="text-xl font-bold mb-4 text-white">Recommended Jobs:</h2>
         {jobs.length === 0 && !loading && !error && (
-          <p className="text-gray-600">No jobs to display. Enter skills and click "Find Jobs".</p>
+          <p className="text-black">No jobs to display. Enter skills and click "Find Jobs".</p>
         )}
         <ul className="">
           {jobs.map((job, index) => (
-            <li key={index} className="p-4 border border-gray-300 rounded-md m-5">
-              <h3 className="text-lg font-bold mt-0">{job.jobTitle}</h3>
+            <li key={index} className="p-4 border border-gray-300 rounded-md m-5 mt-0">
+              <h3 className="text-lg font-bold pt-0">{job.jobTitle}</h3>
               <p className=" text-white">Company: {job.companyName}</p>
-              <p className=" text-white">Location: {job.location}</p>
-              <p className=" text-white">Skills Required: {job.skillsRequired}</p>
+              {/* <p className=" text-white">Location: {job.location}</p>
+              <p className=" text-white">Skills Required: {job.skillsRequired}</p> */}
               <p className=" text-white">Posted Date: {job.postedDate}</p>
               <a
                 href={job.jobLink}

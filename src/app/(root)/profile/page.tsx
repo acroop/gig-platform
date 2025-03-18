@@ -26,7 +26,7 @@ function Profile() {
         setLoading(false);
         return;
       }
-
+  
       try {
         const response = await axios.post("/api/profile-info", { userId });
         setUserProfile(response.data);
@@ -36,9 +36,16 @@ function Profile() {
         setLoading(false);
       }
     };
-
-    fetchUserProfile();
+  
+    const timer = setTimeout(() => {
+      fetchUserProfile();
+    }, 3000); // 5 seconds delay
+  
+    // Cleanup the timer on component unmount or userId change
+    return () => clearTimeout(timer);
+  
   }, [userId]);
+  
 
   if (loading) {
     return <div>Loading...</div>;
@@ -93,8 +100,9 @@ function Profile() {
                 </p>
                 <p className="text-[20px]">
                   <span className="font-bold">Experience: </span>
-                  {userProfile.experience} years
+                  {userProfile.experience === 0 ? 'Fresher' : `${userProfile.experience} years`}
                 </p>
+
               </div>
 
               {/* Top Skills */}
